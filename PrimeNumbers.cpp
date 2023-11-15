@@ -2,21 +2,6 @@
 
 using namespace std;
 
-int isPrime(int n)
-{
-    if (n % 2 == 0)
-    {
-        return 0;
-    }
-
-    if (n % 3 == 0)
-    {
-        return 0;
-    }
-
-    return 1;
-}
-
 int main()
 {
     int limit, num;
@@ -27,10 +12,26 @@ int main()
     for (int i = 0; i <= limit; i++)
     {
 
-        num = isPrime(i);
-
         if (num == 0)
         {
+            continue;
         }
+
+        if (num == 1)
+        {
+            continue;
+        }
+
+        if (num % 2)
+        {
+            continue;
+        }
+
+        if (num % 3)
+        {
+            continue;
+        }
+
+        cout << i;
     }
 }
